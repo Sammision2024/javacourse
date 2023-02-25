@@ -1,0 +1,500 @@
+********************************************************************************************************************
+
+1) Math Function in java give random values.
+2) Check all the math functions.
+3) Enhanced For Loop(NO need to mention size of loop
+4) Jagged Array(Columns are not Specified ).
+
+5) Drawbacks Of Array
+* Cannot Expand the size.
+* Inserting and Deletion become difficult.
+# Collections solve this drawbacks of array.
+
+6) For better programming always use length function to print array or dealing with length.
+
+7) For String there is a special block called String Constant Pool in Heap memory.if we create two object it means they
+   are not two object the are two reference and one object if data is same.
+
+  String s1="Santosh";
+  String s2="Santosh";
+  string name = s1 + "santanio";//it will create new address not sa="Santosh" in memory.
+* Mutable String  = Change.
+* Immutable String  = Unchange.(By default Strings are immutable.Once we create object we cannot change the string).
+
+* StringBuffer and StringBuilder is used to implement muttable string.
+
+* StringBuffer and StringBuilder classes that should be used for String manipulation. StringBuffer and StringBuilder are mutable objects in Java. They provide append(), insert(), delete(), and substring() methods for String manipulation
+
+* StringBuffer is threadsafe and stringbuider is not thread safe.else part both are same..
+
+8) Every time when we create object there will be two steps.
+  Step 1: Class Load first.(Class load only ones).
+  Step 2:Object will intialized.
+
+9) In jVM there is class Loader block(class we load from libraray and it will happens only ones).
+* When object is created class will load it will call to the static block and then after constructor if present.
+
+10) In Encapsulation while creating the instance variable we have to make it private.Then the variable is accessible
+   within the calss only.
+* No one can directly access to my variable.
+* But indirectly acceses is possible by useing the methods.
+
+11) Default value of String is null.
+* When a object is created in memory it is created by blank space.
+
+12) When object is created that object is assinged value instantly this is done by constructor.We can set the default
+  values.
+
+* Constructor look like method itself.Constructor name is name as class name it is complusory.
+* Constructor never return anything.
+* we have to specify only the access(Public,private).
+* Every time when object is created constructor call for each object.
+* Calculation and assigning values always do in mrthod(Constructor will helpful).
+* There are two types of Constructor 1)Parameterized 2)Default.
+
+13) Every constructor in java have method even if we dont declare and that method is super().
+* By default every constructor first statment is super().
+
+14) Every class in java is extends the object class.
+  class A extends object (it will extends by object even if we not declare).
+
+15) Nameing Convections
+
+* class and interface - Calc,Runable.
+* Variable and method - marks,show().
+* constants - PIE,BRAND.
+* Camel casing - showMyMarks().
+* Calculator() - it is constructor convections.
+* DATA - it is consatnt convections.
+* mark - variable convections.
+
+16) The object we cannot use again is called anonymus object.
+17) 1)Inheritance means copying the features from upper classs(parent class(Base class,Super class) to child class(Derived class,Subclass))
+
+Example :- Laptop is a computer.Laptop got a features from computer(Inheritance).
+           Before there is normal calculators which do simple calculatons(+,-,/,*).Now there are advance calculators which inherit the features from normal calculators. 
+
+*  We have two class files Calculator(Parent class) and Advancecal(Child class).Child is takeing features from      parent class.Remember in java class should be present.Java file not necessary.
+
+18)****************** Multilevel inheritance **********************
+ 
+ public class Calculator
+ {
+
+ }
+ public Advancecal extends Calculator
+ {
+
+ }
+ public Scientificcal extends Advancecal
+ {
+    
+ }
+
+19) Methodoveriding :-Means overiding(makeing changes in method of parent class).
+* Methodoveriding(same method in both parent and derived class but have different properties or behaviour) gives    preference to a same class.
+
+20) import.java.lang (Every java file is a default import.java.lang).
+*   import.java.util.*  (* means we have accesses all the files of a folder).
+
+21) Packages is a folder which conatains file.It is helpful when we working on big projects.
+
+22) import.java.util.* (java have a folder util and we access all files which are in util folders).
+
+23) import others.tools . *;    //it will import others folder in others folder there is tools folder in tool folders there is Claculator and Advancecal fils.By useing * we importing all files of others\tools folder.
+
+import tools.Calculator; //importing Calculator class from tools folder(package).
+import tools.Advancecal; //importing Advancecal class from tools folder(package).
+import tools . *;        //* t will import all files from tools folder(package).
+import others.*; //it will not work because * means all files not all projects.
+
+24) When we shareing a package to entire world it should have unique name.
+
+25) ******Access Modifier********:- public,private,protected and default.
+
+* public
+1) If variable or scope is not a public then we cannot access from outside.We can only access inside package.
+2) No package means same package no need to specify access modifier.
+3) Methods should be always public.So it can be acess from anywhere.
+
+* private
+1) private int rollnum=82;  //It can use only in same class.
+2) private methods or variable can only access in same class.
+
+* Default
+1) int num=9; it is a default and it can access in same package.
+
+* protected
+1) If we make protected then it will cannnot acces from different package.
+2) protected variable or methods can acess from outside the package but it should be a subclass(inherit/derived).
+3) protected variable or methods can accesss in same package.
+
+26) One file can have only one public class.Try to make public mrthods variables.
+* Try to avoid default give/use private,public and protected.
+
+27) 
+
+Poly = Many Morphism = Behaviour
+
+1) Same onject have different behaviour or one thing useing for many purposes.
+2) There are two types of polymorphism 
+
+                               Polymorphism
+                                    |
+                                    |
+            __________________________________________________________
+            |                                                         |
+    Compile Time Polymorphism                               Run Time Polymorphism
+    --------------------------                              ----------------------
+   > If the Behaviour is defined                      >If the Behaviour is defined
+      at compile time then it is                        at run time then it is run
+      compile time polymorphism.                        time polymorphism.
+      Example:- Overloading.                             Example:- Overriding(We dont know which method should call
+                                                                   it will decide at runtime)
+
+
+29) obj=new B();   //We can assign a new object to old variable.
+    obj.show();    //It will call class B method it is called Dynamic Methos Dispatch..
+
+28) Final keyword can use with Variable,Method ans class
+*  If we assign final keyword we cannot change the value.
+
+29) ***************** Object Class(Default Super Class of Every Class) **********************************
+
+1) Every we try to print the object it will called tostring() method by default.
+2) tostring() method is a objectclass method even if we dont write in class then also it is called by object.
+2) tostring() method returns the class name."@".integer.toHexString(hashCode());
+3) Hashcode tryies to convert all data in one string.(if we have five variable it will apply hash algorithm and    generate a string)
+
+4) If we not mention a method in class and try to call class by object it will called to super class (object class) tostring() method.
+
+5) (To two compare integer use ==).
+
+6) By default object class is a super class of every class.
+
+6) For checking two objects it should have equal value and also a same hashcode so dont impleemtn equals method by self use IDE suggestions.
+
+30) Upcasting   :-  A obj = (A) new B(); //Upcasting(Goeing Up object is of subclass assigning to Parent class)
+    Downcasting :- Reference of parent class assisnging to subclass.
+
+31) ******************** Abstract Keyword ***********************
+
+1) We want to only declare the method abstract key word sholud use.
+    public abstract void drive();
+
+2) abstract method can only belong to abstract class.
+3) We cannot create object of a abstract class.
+4) The class which extenmding the abstract it is compulsory to define the abstract method.
+4) The class which extenmding the abstract it is compulory should have the abstract method.
+5) abstract class have abstract method It is not compulsory.
+6) The class which extending the abstract it is compulsory to define the abstract method if it is failed to define.
+   Then it also become abstract class.
+
+32) **********************Innerclass(Class Inside Class)***********************
+
+1) A.B obj1=obj.new B(); B belongs to class A(A.B) obj1 = declare first object of A.
+   Then new object of B(obj.new B())
+2) We cannot make outer class Static.
+3) We can make inner class Static only. 
+
+33) 
+1) Anonymus Inner class = Something Doesn't have a name is called Anonymus class.
+2) For overiding the method we are creating the new class if we want overide only once it is not good to makw a new
+   class.We can override method while creating object.
+
+   A.bbj=new A()
+   {  
+    public void show()
+    {
+        //This is a inner class and it has not name so it is called inner class.
+    }
+   
+   }:
+3) Anonymus Inner class also can used for abstract class.
+
+34)  ***************************Interface*******************************
+
+1) Inteface is not a class.We can use interface in place of abstract.
+2) By default every method in interface is public abstract.
+3) Interface will give path or design/methods it will not implement methods.
+4) We have to create a class for implement the interface methods by useing a implements(key word).
+                  class B implements A,X;
+
+5) It is complusory to a class which implementing the interface to define all methods of interface else that class 
+   also become a abstract class.
+
+6) By default all the variables in interface are Final and Static.
+       int age; Throws an error assign value instantly it is final default.
+
+7) We cannot instaneous the methods of interface.
+8) Interface dont't have their own memeory.
+9) one class can immplement more than one(multiple) interface.
+
+10) We can extends(inherit) the interface.
+            interface Y extends X;
+
+11) class - class         --> extends.
+    class - interface     --> implements.
+    interface - interface --> extends.
+
+35) ***************Enums****************************
+
+1) enumeration(enum for short)
+2) Enums are name constants.
+3) Enums are inbuilt.
+4) When we have to return status to a client it is useful.
+5) enum cannot extends by other class.
+6) Every class in java default ectends object class(super class).Same enum extends default  enum class.
+
+36) 1) Annotation is a supplyment to the compiler or to the runtime or it is also called a metadata.(compiler will help if something wrong)
+
+37) FunctionalInterface : The interface have only one method is called functionalinterface.
+1)  @FunctionalInterface Annotation is used for Functionalinterface.
+
+38) Lambda Expression :- We can use Lambda Expression only with Functional Interface.
+1) --> Is a notation of lamda expression.
+
+39) ****************************Exceptions Handling********************************************
+>> Types of Errors
+1) Compile Time Error (Easy to solve by compiler suggestions).
+2) Run Time Error (Every thing is working code also working because of some resons code suddenly stop execution).
+
+*  Example :- Program finding the file and that file is deleted by you then that error is called Runtime erroe,
+              When file is present in system it is working properly.
+* Suppose a plane is in air and suddendly enngine is stop working it create a big problem.
+* Such Runtime Errors are called Exceptions.We should handle the exceptions this called Exceptions Handling.
+
+* Types of statement should we handle.
+1) Normal   :- Impact is not much seviour.
+2) Critical :- Impact of promblem is seviour.
+
+3) Logical Error (Every thing is working properly but getting Unexpected output).
+
+>>>Exception Hiearchy
+
+                             Object Class
+                                  |
+                                  |
+                              Thorowable    
+                                  |
+      ____________________________|___________________________________
+      |                                                               |
+      |                                                               |
+    Error(We cannot Handle This type of Error)                    Exception 
+      |                                                               |
+      |                                                               |(Many More Exceptions are there)
+______|____________                              _____________________|_____________________________
+|          |      |                              |                    |                             |
+(Thread    |    IOError                   > Runtime Exception       SQL Exception              IO Exception 
+Death)     |                                |-> Arithmetic         ______________________________________ 
+           |                                |-> Arrayoutofbound                       |
+       VirtualMachine Error                 |-> Nullpoint                             |
+               |                         _____________________                (Checked Exceptions)
+               |                                   |                         Compulsory shoild handle)
+               |                                   |
+          Out of Memory                    (Unchecked Exceptions)
+
+4) throw :- Throws the error/Exception to the catch block according to the condition.
+
+**************************************Threads***************************************************************
+
+40)  ***********Threads :- Smallest unit which can work with.We can run multiple threads at runtime.**********
+
+* Multiple Software working at same time is called multitasking.
+* All software will run parallely by useing time sharing.
+
+* One task is break into multiple things it is possible in same software there can be multiple process to run at same
+  time.Divideing the task into small things(Smallest unit) is called Threading.
+  Example :- Editor Show text and also show the error.
+1) In a same program we can have multiple threads running at a same time.
+
+Example :- If Chrome useing 67 threads(Small tasks) each thread execute parallely.
+
+* We can't use normal object as multiple threads.
+1) If we want to use object as Threads extends them by Thread(class).
+2) In Every thread we have to have a run().
+3) start will call the run method(run()).
+4) Scheduler in OS allows thread for executing on OS.
+
+                                  main(method)
+                                      |
+                                      |(main keep executing)
+                                      |
+                                      |(This point when main want to execute show() by 2 different threads).
+    __________________________________|_______________________________________________
+    |                                                                                 |
+ show()                                                                              show()
+ start() for both thread .                                                           start()
+ 
+ 41) 
+ >>> Threadpriority
+
+1) Range of priority is goes from 1 to 10. Where 1(is the least priority and 10 is the max priority).
+2) 5 is the default priority.
+
+3) Thread.Sleep() :- After declare thread as sleep it will stop exceuting for given time.
+>>Example :- Wait for 1 ms. 
+
+* sleep method will throw interrupt exception so write in try catch block.
+
+>> Race condition.
+
+1)          Threads <--------------------------------->Mutation(Can Change)
+      t1     and      t2 
+      |                |
+      |                |
+      |                |
+      ------>  i   <----
+both thread t1 and t2 are trying to change i 
+* Always use thread with data which is immutable.If useing thread with muutable data make it threadsafe.
+>> Threadsafe :- Only one thread can work with data.
+
+*) t1.join();
+        /*
+        Join is aspecial method which allows our main thread to wait for others thread to comeback
+        
+        */
+*) Two threads are working simultaneously on i we can get different values.
+*) Two iterations can increment i for same value if both thread collide at same time.
+>> Solutions for this problem.
+*) We can use synchronized keyword(It makes the data Threadsafe).Onle one thread can take charge of method().
+*) By useing synchronized we make sharable resorce thread safe and deal/avoid Race condition.
+
+>>>>>>>>>>>>Thread States
+
+                 NEW    -----> (Start())          RUNNABLE(Waiting for Scheduler)         
+                                                    |              ^
+                                                    |              |(notify())
+                                                    |              |
+                                                    |            WAITING
+                                          (run())   |               ^
+                                                    |               |(sleep() or wait())
+                                                    |               |
+                                                    |               |
+                                             RUNNING(Actual running on CPU)
+                                                           |
+                                                           |(stop() and it can stop from Runnable also)
+                                                           |
+                                                          DEAD                      
+42)  ***************************************Collections***********************************************************
+*) # TYpes of collections.
+
+1)Collection API (concept)
+2)Collection     (Interface)
+3)Collections    (Class)
+
+Collection :- Group of Elements.We can use inbuilt class and data structures.
+
+*) By default collection API is work with objects.
+*) By useing generics always mention type<Integer ,etc>.It also reduce bugs or Run time errors.
+
+*******************************List implement collection(ArrayList extends List,Collection)***********************
+*) List also supports ccollections of same values.
+
+*******************************Set implement Collection(HashSet extends Set,Collection)****************************
+*) Set Support uniques values.
+*) Set does not follow sequence
+*) Set does n't have a index value.
+*) Set is collection of unique value.
+*) Set is also called Collection Framework.
+*) For sorted values we can use TreeSet<>();
+
+>>Map :- Map is a collection of key and value pair
+        Map<String,Integer> students=new HashMap<>();
+
+>>HashMap :- Is normal.
+>>HashTable :- Is Synchronized.(Thread Safe).
+
+>>Comparator :- Is used for developing own logic.
+
+*) Comparator is an Interface.
+*) For our own logic pass object com.
+*) Collections works with the wrapper classes.
+*) Comparator<Students> com = new Comparator<Students>() //We can use Comparator or Comperable.
+*) class Students implements Comparable <Students>//We are compareing Students.
+*) Compareable is used to give power to class compare itself.
+*) Comparator is used to develop own logic for sorting and for other things.
+
+>> forEach()
+1) forEach is a part of List interface and it give a one value(n).
+        2) forEach() takes an object of a cusumer.
+        3) Consumer is a funtionalinterface.It is a accept(T t);
+
+>> **********************************************Stream***************************************************
+
+Stream :- Stream is an interface.
+
+*) stream() returns the object of the stream.
+*) Stream<Integer> s1=nums.stream();//All the values available in the nums now we can get imn s1.
+*) The changes we made in Stream objetc it will not affect actual list.
+*) Once we use the Stream we cannot reuseit(Disadvantage).
+*) Stream provides lots of method(Advantage).
+
+>> **********************************************Stream filter()*****************************************
+
+*) filter needs object of Predicate.
+*) Predicate belongs to pacakage (import java.util.function.Predicate);
+*) Predicate is a interface have a method called test().test() return boolean values.
+*) If from a Stream we apply a filter for a particular value if it is true it will go ahead.
+   (real life example :- If we put filter in middle of river we will get only pure water) 
+
+>>**********************************************Stream map()****************************************
+
+*) map need object of Function.
+*) Function is a Functional Interface which take two types 
+   Function<Integer(take type),Integer(return type)> fun=new Function<Integer,Integer>().
+  
+*) It contain apply() method.
+*) Function belongs to pacakge (import java.util.function.Predicate;).
+
+  // Function<Integer,Integer> fun=new Function<Integer,Integer>(){
+
+        //     public Integer apply(Integer n){
+        //         return n*2;//Logic can be anything.We takeing just for understanding.
+        //     }
+        //};
+
+    //Function<Integer,Integer> fun=n ->  n*2;//By Lamda Expression.
+
+    >>**********************************************Stream filter()****************************************
+
+*)  reduce() takes two parameters(Type,Operations(Binary operator).
+*)  reduce(0,(c,e)->c+e);
+    c,e :- Where c is the carry and e is the element.
+
+*/***********************************************Wrapper class******************************************
+
+*) For Every Primitive type we have a class.
+
+1) int     -> Integer(class extends the object class).
+2) char    -> Character
+3) double  -> Double
+
+>>Boxing
+        int num =7;     
+        Integer num1=new Integer(num);
+
+    Now we are takeing primitive(num) value and storeing that in an wrapper or class object(num1) this is called
+    Boxing.
+
+>> AutoBoxing   
+        int num =7;     
+        Integer num1=num;
+
+    Primitive data converting in to object(num1) automatically is this is called AutoBoxing.
+
+>>UnBoxing
+       int num =7;
+       Integer num1=num;
+       int num2=num1.intValue();
+
+    Object type to primitive type.This is called Unboxing.
+
+>>Auto-Unboxing
+        int num =7;
+        Integer num1=num;
+        int num2=num1;
+
+    Object type to primitive type it is working automatically is called Auto-Unboxing.
+
+***********************************************************************************************************
